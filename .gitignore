@@ -2,6 +2,7 @@
 gmail_tokens.json
 gmail_secrets.json
 scripts/gmail_secrets.json
+scripts/notion_secrets.json
 *.secret
 *.key
 

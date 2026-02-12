@@ -95,14 +95,34 @@ sessions_send({ sessionKey: originSession, message: "Done: Fixed X and pushed" }
 
 Add whatever helps you do your job. This is your cheat sheet.
 
-### Notion MCP
-- **Integration:** Connected to Mukut's documentation database
-- **Database:** "Wikis" (id: 23c6a541-b895-809c-9aa3-df1da48c34fc)
-- **Topics:** notion mcp, claude code, api integrations, project management, website content, accounting, notion, database
-- **Projects:** ECS, Claude, Event Betting Plugin
-- **Config:** `~/.claude/mcp.json`
-- **Use:** Claude Code can query via MCP, or direct API calls via curl
-- **RULE:** Read-only troubleshooting reference
+### Notion API
+- **Token:** `scripts/notion_secrets.json` (gitignored)
+- **Bible:** `docs/OpenClaw-Notion-Bible.md` (full spec)
+- **Helper:** `scripts/notion_api.sh <METHOD> <endpoint> [json_body]`
+- **MCP Config:** `~/.claude/mcp.json` (for Claude Code)
+
+#### Databases
+| Database | ID | Access |
+|----------|----|----|
+| Tasks | `d27d66c4b43942e5898cb81347220abf` | Read/Write (pending) |
+| Wiki | `23c6a541b895809c9aa3df1da48c34fc` | Read-only |
+| Client Communications | `28a6a541b895804c9363d19c7aaf9b8f` | Read/Write (pending) |
+
+#### Users
+| Name | ID | Team |
+|------|----|------|
+| Vasyl Vursta | `e7a46d86-0bb1-4904-90e5-1077f965dd10` | IT |
+| Andrey Artymovych | `5573e6fa-ee04-494d-8a63-68cc748d62c1` | Operations |
+| Mukut (Nikita) | `06b0bd32-0786-48d6-8284-3b09270c5bf3` | Operations |
+
+#### Key Rules
+- **Task creation:** Preview + confirmation before API call
+- **Status:** Due date → "Estimated", no due date → "Idea"
+- **Task body:** Context (toggles) → Goals (to_do) → Notes (bullets)
+- **Query filters:** Use AND for `does_not_equal` exclusions (OR is a trap)
+- **Images:** Must be hosted on GitHub (`sonderspot/ECS-Public-Assets`)
+- **Rate limit:** 2-second delay between API calls
+- **Client Comms:** SEC Rule 204-2 compliance required
 
 ### Browser (Chrome + Xvfb)
 - **Installed:** Feb 10, 2026 — for testing, may remove if RAM becomes an issue
