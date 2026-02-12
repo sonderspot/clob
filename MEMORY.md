@@ -46,6 +46,13 @@ _Curated learnings and persistent context. Daily files have the raw notes._
 - ~1.9GB RAM, 2GB swap
 - Datacenter: Hetzner (flagged by bot detection)
 
+### Clob Repo (Workspace Backup)
+- **GitHub:** https://github.com/sonderspot/clob (private)
+- **Local:** `/root/.openclaw/workspace`
+- **Contents:** AGENTS.md, SOUL.md, MEMORY.md, memory/, scripts/, skills/, docs/
+- **Excludes:** gmail_secrets.json, node_modules, venvs, pycache, logs
+- **Use:** Sync to Mac for Claude Code access to workspace files
+
 ### Browser Setup
 - Chrome via `/usr/local/bin/chrome-xvfb`
 - Xvfb service on display :99
