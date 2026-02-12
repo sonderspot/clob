@@ -1,0 +1,6 @@
+{
+  "name": "task-monitor",
+  "description": "Monitor cron jobs and background tasks. Log failures, notify via Telegram, maintain overview at logs/task-overview.md",
+  "version": "1.0.0",
+  "author": "Clob"
+}

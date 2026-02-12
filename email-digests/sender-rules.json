@@ -1,0 +1,176 @@
+{
+  "description": "Email sender rules for daily digest. Action: include | skip | delete",
+  "lastUpdated": "2026-02-11",
+  "senders": [
+    {
+      "email": "insider@mail.thecompoundnews.com",
+      "name": "The Compound Insider",
+      "category": "Newsletter",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": ""
+    },
+    {
+      "email": "clob@elitecurrensea.com",
+      "name": "Clob (self)",
+      "category": "System",
+      "action": "skip",
+      "firstSeen": "2026-02-09",
+      "notes": "Skip to avoid re-analyzing previous summaries"
+    },
+    {
+      "email": "no-reply@accounts.google.com",
+      "name": "Google",
+      "category": "Security",
+      "action": "skip",
+      "firstSeen": "2026-02-09",
+      "notes": "Security alerts - not useful for digest"
+    },
+    {
+      "email": "info@elitecurrensea.com",
+      "name": "Elite CurrenSea",
+      "category": "Work",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": ""
+    },
+    {
+      "email": "support@namecheap.com",
+      "name": "Namecheap Support",
+      "category": "Security",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": "NEW - Domain security alerts"
+    },
+    {
+      "email": "drive-shares-dm-noreply@google.com",
+      "name": "Google Drive/Forms",
+      "category": "Work",
+      "action": "skip",
+      "firstSeen": "2026-02-09",
+      "notes": "Blacklisted by Mukut 2026-02-09"
+    },
+    {
+      "email": "hello@sonderspot.com",
+      "name": "SonderSpot OU",
+      "category": "Work",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": "Forwarded emails from company"
+    },
+    {
+      "email": "account-insights@mailchimp.com",
+      "name": "Mailchimp Account Insights",
+      "category": "Marketing Analytics",
+      "action": "skip",
+      "firstSeen": "2026-02-09",
+      "notes": "Blacklisted by Mukut 2026-02-09"
+    },
+    {
+      "email": "no-reply@cloudways.com",
+      "name": "Cloudways",
+      "category": "Billing",
+      "action": "skip",
+      "firstSeen": "2026-02-09",
+      "notes": "Blacklisted by Mukut 2026-02-09"
+    },
+    {
+      "email": "notify@mail.supalytics.co",
+      "name": "Supalytics",
+      "category": "Analytics",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": "Website analytics"
+    },
+    {
+      "email": "macmukut@gmail.com",
+      "name": "Nikita Barabanov (personal)",
+      "category": "Personal",
+      "action": "include",
+      "firstSeen": "2026-02-09",
+      "notes": "Mukut's personal forwards"
+    },
+    {
+      "email": "no-reply@connect.etoro.com",
+      "name": "eToro",
+      "category": "Newsletter",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Fintech/trading platform"
+    },
+    {
+      "email": "andrea.rabello@realvnc.com",
+      "name": "Andrea Rabello (RealVNC)",
+      "category": "Sales",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Sales outreach"
+    },
+    {
+      "email": "trade@alerts.ctrader.com",
+      "name": "AXIORY cTrader Alerts",
+      "category": "Trading",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Trade execution alerts"
+    },
+    {
+      "email": "noreply@polymarket.com",
+      "name": "Polymarket",
+      "category": "Newsletter",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Prediction market newsletter"
+    },
+    {
+      "email": "CloudPlatform-noreply@google.com",
+      "name": "Google Cloud Platform",
+      "category": "Security",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Cloud security alerts"
+    },
+    {
+      "email": "access@interactive.wsj.com",
+      "name": "WSJ",
+      "category": "Newsletter",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Wall Street Journal briefings"
+    },
+    {
+      "email": "antonio@circlemind.co",
+      "name": "Antonio Vespoli (Circlemind)",
+      "category": "Business",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Circlemind support contact"
+    },
+    {
+      "email": "noreply@xs.com",
+      "name": "XS Ltd",
+      "category": "Trading",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Broker notifications"
+    },
+    {
+      "email": "klienditugi@stat.ee",
+      "name": "Estonian Statistics Office",
+      "category": "Compliance",
+      "action": "include",
+      "firstSeen": "2026-02-10",
+      "notes": "NEW - Government/regulatory"
+    },
+    {
+      "email": "accountservices@mailchimp.com",
+      "name": "Mailchimp Account Services",
+      "category": "Work",
+      "action": "include",
+      "firstSeen": "2026-02-11",
+      "notes": "NEW - List management notifications"
+    }
+  ],
+  "unknownSenderAction": "include",
+  "_unknownOptions": "flag (notify for review) | include | skip"
+}

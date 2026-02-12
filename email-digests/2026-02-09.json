@@ -1,0 +1,36 @@
+{
+  "date": "2026-02-09",
+  "generatedAt": "2026-02-09T15:20:00Z",
+  "summary": {
+    "totalEmails": 1,
+    "processed": 1,
+    "skipped": 0,
+    "newSenders": 0
+  },
+  "byCategory": {
+    "Security": [
+      {
+        "from": {
+          "email": "support@namecheap.com",
+          "name": "Namecheap Support"
+        },
+        "subject": "Your confirmation code",
+        "snippet": "Sign-in from unauthorized device detected — please verify.",
+        "priority": "high"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "from": {
+        "email": "support@namecheap.com",
+        "name": "Namecheap Support"
+      },
+      "subject": "Your confirmation code",
+      "snippet": "Sign-in from unauthorized device detected — please verify.",
+      "category": "Security",
+      "action": "included"
+    }
+  ],
+  "newSenders": []
+}

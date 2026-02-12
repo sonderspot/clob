@@ -1,0 +1,32 @@
+# Sensitive
+gmail_tokens.json
+gmail_secrets.json
+scripts/gmail_secrets.json
+*.secret
+*.key
+
+# Virtual environments
+smooth-venv/
+*-venv/
+.venv/
+venv/
+
+# Temp files
+*.tmp
+*.log
+.DS_Store
+
+# Large media (keep icons, ignore screenshots)
+*.png
+!ecs-ai-telegram-icon*.png
+
+# Clawhub cache
+.clawhub/
+
+# Node modules
+node_modules/
+*/node_modules/
+
+# Python cache
+__pycache__/
+*.pyc

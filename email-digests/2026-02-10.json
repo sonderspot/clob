@@ -1,0 +1,90 @@
+{
+  "date": "2026-02-10",
+  "runTimestamp": "2026-02-10T14:30:00Z",
+  "totalEmails": 10,
+  "processed": 10,
+  "skipped": 0,
+  "emails": [
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "no-reply@connect.etoro.com",
+      "subject": "Fwd: Build your own trading apps with the eToro's Public APIs",
+      "category": "Newsletter",
+      "snippet": "Enhance your investing experience with eToro APIs - announcing public API access for building trading apps"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "andrea.rabello@realvnc.com",
+      "subject": "Fwd: RealVNC Software Trial - Remote Control & Remote Access Software",
+      "category": "Sales",
+      "snippet": "Follow-up on RealVNC remote access trial interest"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "trade@alerts.ctrader.com",
+      "subject": "Fwd: [cTrader live account] Pending order filled for GBPUSD",
+      "category": "Trading",
+      "snippet": "AXIORY cTrader - Pending order filled for GBPUSD"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "trade@alerts.ctrader.com",
+      "subject": "Fwd: [cTrader live account] Pending order filled for USDJPY",
+      "category": "Trading",
+      "snippet": "AXIORY cTrader - Pending order filled for USDJPY"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "noreply@polymarket.com",
+      "subject": "Fwd: Trump: \"I made a mistake\"",
+      "category": "Newsletter",
+      "snippet": "Polymarket Polygraph daily newsletter - prediction market news"
+    },
+    {
+      "from": "Google Cloud <CloudPlatform-noreply@google.com>",
+      "originalSender": "CloudPlatform-noreply@google.com",
+      "subject": "[Action Advised] Review Google Cloud credential security best practices",
+      "category": "Security",
+      "snippet": "Security best practices for service account and API key management"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "access@interactive.wsj.com",
+      "subject": "Fwd: WSJ Wealth Adviser Briefing: AI Tech Trade, Venture Capital, Chinese 'Auntie' Investors",
+      "category": "Newsletter",
+      "snippet": "AI tech trade analysis, venture capital trends, Chinese retail investor phenomenon"
+    },
+    {
+      "from": "Antonio Vespoli <antonio@circlemind.co>",
+      "originalSender": "antonio@circlemind.co",
+      "subject": "Re: Recording deletion issue",
+      "category": "Business",
+      "snippet": "Circlemind response - delete endpoint only for enterprise customers, requires activation"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "noreply@xs.com",
+      "subject": "Fwd: Revised schedule for February 2025 holidays",
+      "category": "Trading",
+      "snippet": "XS Ltd broker - adjusted trading hours for February holidays"
+    },
+    {
+      "from": "SonderSpot OU <hello@sonderspot.com>",
+      "originalSender": "klienditugi@stat.ee",
+      "subject": "Fwd: Täitmata kohustus",
+      "category": "Compliance",
+      "snippet": "Estonian Statistics Office - unfulfilled quarterly economic activity report obligation"
+    }
+  ],
+  "newSenders": [
+    {"email": "no-reply@connect.etoro.com", "name": "eToro", "category": "Newsletter"},
+    {"email": "andrea.rabello@realvnc.com", "name": "Andrea Rabello (RealVNC)", "category": "Sales"},
+    {"email": "trade@alerts.ctrader.com", "name": "AXIORY cTrader Alerts", "category": "Trading"},
+    {"email": "noreply@polymarket.com", "name": "Polymarket", "category": "Newsletter"},
+    {"email": "CloudPlatform-noreply@google.com", "name": "Google Cloud Platform", "category": "Security"},
+    {"email": "access@interactive.wsj.com", "name": "WSJ", "category": "Newsletter"},
+    {"email": "antonio@circlemind.co", "name": "Antonio Vespoli (Circlemind)", "category": "Business"},
+    {"email": "noreply@xs.com", "name": "XS Ltd", "category": "Trading"},
+    {"email": "klienditugi@stat.ee", "name": "Estonian Statistics Office", "category": "Compliance"}
+  ]
+}

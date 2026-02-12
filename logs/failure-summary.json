@@ -1,0 +1,13 @@
+{
+  "failures": [
+    {
+      "timestamp": "2026-02-09T04:30:00Z",
+      "jobId": "75690562-006d-46da-b3ee-14992a1990b5",
+      "jobName": "Daily Email Digest",
+      "error": "model not allowed: anthropic/claude-sonnet-4",
+      "resolution": "Changed model to anthropic/claude-opus-4-5",
+      "resolved": true,
+      "resolvedAt": "2026-02-09T14:41:52Z"
+    }
+  ]
+}

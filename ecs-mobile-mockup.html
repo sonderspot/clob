@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Elite CurrenSea — Mobile Menu Mockup</title>
+<style>
+  :root {
+    /* ECS Color System */
+    --teal-900: #0D4D56;
+    --teal-700: #117A8B;
+    --teal-500: #17A2B8;
+    --teal-300: #6EC6D5;
+    --teal-200: #A8DBE3;
+    --teal-100: #D4EDF1;
+    --teal-50: #E8F6F8;
+
+    --purple-500: #7B2FDB;
+    --purple-100: #E2CDF8;
+    --purple-50: #F0E6FC;
+
+    --gray-900: #2C3345;
+    --gray-700: #525866;
+    --gray-500: #7E8594;
+    --gray-400: #A5ABB8;
+    --gray-300: #C5C9D3;
+    --gray-200: #E0E2E8;
+    --gray-100: #F0F1F4;
+    --gray-50: #F5F5FA;
+
+    --red-500: #E91E63;
+
+    --white: #FFFFFF;
+
+    /* Shadows (ECS Elevation) */
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    /* Layout */
+    --bottom-nav-h: 64px;
+    --header-h: 56px;
+    --tabs-h: 46px;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    height: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── App Shell ── */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    position: relative;
+    background: var(--gray-50);
+  }
+
+  /* ── Header ── */
+  .header {
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--gray-900);
+  }
+
+  .logo .accent { color: var(--teal-500); }
+
+  /* ── Horizontal Scrollable Tabs (Twitter-style) ── */
+  .tab-bar {
+    display: flex;
+    background: var(--white);
+    box-shadow: var(--shadow-1);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 9;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-bar::-webkit-scrollbar { display: none; }
+
+  .tab-item {
+    flex: 1 0 auto;
+    min-width: 0;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-500);
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    transition: color 200ms ease;
+    user-select: none;
+  }
+
+  .tab-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background: var(--teal-500);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tab-item.active {
+    color: var(--gray-900);
+  }
+
+  .tab-item.active::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .tab-item:active {
+    background: var(--gray-100);
+  }
+
+  /* ── Content Area ── */
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 16px calc(var(--bottom-nav-h) + var(--safe-bottom) + 16px);
+    background: var(--gray-50);
+  }
+
+  .content-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-1);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+
+  .content-card:active {
+    transform: scale(0.985);
+    box-shadow: var(--shadow-2);
+  }
+
+  .content-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--gray-900);
+    line-height: 1.5;
+  }
+
+  .content-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-700);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--teal-50);
+    color: var(--teal-700);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border: 1px solid var(--teal-200);
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .stat {
+    flex: 1;
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+  }
+
+  .stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--teal-500);
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+  }
+
+  /* ── Bottom Navigation ── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 430px;
+    height: calc(var(--bottom-nav-h) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: stretch;
+    z-index: 100;
+  }
+
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    position: relative;
+    color: var(--gray-400);
+    transition: color 200ms ease;
+    user-select: none;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .nav-item.active { color: var(--teal-500); }
+
+  .nav-item:active { opacity: 0.6; }
+
+  .nav-item svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  /* Active indicator dot */
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--teal-500);
+  }
+
+  /* ── More Menu (slide-up overlay) ── */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 51, 69, 0.4);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+  }
+
+  .overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .more-menu {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100%;
+    max-width: 430px;
+    background: var(--white);
+    border-radius: 12px 12px 0 0;
+    z-index: 201;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-bottom: var(--safe-bottom);
+    box-shadow: var(--shadow-3);
+  }
+
+  .more-menu.open {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .more-menu-handle {
+    width: 36px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gray-300);
+    margin: 10px auto 6px;
+  }
+
+  .more-menu-title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 24px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-900);
+  }
+
+  .more-menu-list {
+    list-style: none;
+    padding: 8px 0 16px;
+  }
+
+  .more-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: background 150ms ease;
+    min-height: 48px;
+  }
+
+  .more-menu-item:active {
+    background: var(--gray-100);
+  }
+
+  .more-menu-item svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--gray-500);
+    flex-shrink: 0;
+  }
+
+  .more-menu-item.danger {
+    color: var(--red-500);
+  }
+
+  .more-menu-item.danger svg {
+    fill: var(--red-500);
+  }
+
+  /* ── Desktop preview frame ── */
+  @media (min-width: 431px) {
+    body {
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .app {
+      height: 812px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--gray-300);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+    .bottom-nav {
+      border-radius: 0 0 22px 22px;
+    }
+    .more-menu {
+      border-radius: 12px 12px 22px 22px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Elite <span class="accent">CurrenSea</span></div>
+  </header>
+
+  <!-- Horizontal Scrollable Tabs -->
+  <nav class="tab-bar" id="tabBar">
+    <div class="tab-item active" data-tab="securities">Securities</div>
+    <div class="tab-item" data-tab="trading">Trading</div>
+    <div class="tab-item" data-tab="fixed-income">Fixed Income</div>
+  </nav>
+
+  <!-- Content Area -->
+  <main class="content" id="contentArea">
+
+    <!-- Securities Tab Content -->
+    <div id="tab-securities">
+      <div class="content-card">
+        <span class="badge">Live</span>
+        <h3>Market Overview</h3>
+        <p>Real-time securities data, watchlists, and portfolio tracking across global markets.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">1,247</div>
+            <div class="stat-label">Instruments</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">+2.4%</div>
+            <div class="stat-label">Portfolio</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">38</div>
+            <div class="stat-label">Alerts</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-card">
+        <h3>Top Movers</h3>
+        <p>EUR/USD, GBP/JPY, and XAU/USD showing strong momentum this session. Volatility index elevated.</p>
+      </div>
+      <div class="content-card">
+        <h3>Watchlist</h3>
+        <p>Your 12 tracked instruments updated in real-time. Tap to view detailed charts and analysis.</p>
+      </div>
+    </div>
+
+    <!-- Trading Tab Content (hidden by default) -->
+    <div id="tab-trading" style="display:none;">
+      <div class="content-card">
+        <span class="badge">Active</span>
+        <h3>Open Positions</h3>
+        <p>3 active trades across forex and commodities. Net P/L currently positive.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Open</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">+$482</div>
+            <div class="stat-label">P/L</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-card">
+        <h3>Order Book</h3>
+        <p>2 pending limit orders. 1 stop-loss triggered today. Review your order history.</p>
+      </div>
+      <div class="content-card">
+        <h3>Trade Ideas</h3>
+        <p>AI-generated trade setups based on technical and sentiment analysis. 5 new ideas today.</p>
+      </div>
+    </div>
+
+    <!-- Fixed Income Tab Content (hidden by default) -->
+    <div id="tab-fixed-income" style="display:none;">
+      <div class="content-card">
+        <span class="badge">Bonds</span>
+        <h3>Yield Curve</h3>
+        <p>US Treasury yields inverted across 2Y-10Y spread. Monitor rate expectations and central bank signals.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">4.32%</div>
+            <div class="stat-label">10Y Yield</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">-18bp</div>
+            <div class="stat-label">Spread</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-card">
+        <h3>Credit Markets</h3>
+        <p>Investment-grade spreads tightening. High-yield showing mixed signals across sectors.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <div class="nav-item active" data-nav="overview">
+      <svg viewBox="0 0 24 24"><path d="M4 13h6a1 1 0 001-1V4a1 1 0 00-1-1H4a1 1 0 00-1 1v8a1 1 0 001 1zm0 8h6a1 1 0 001-1v-4a1 1 0 00-1-1H4a1 1 0 00-1 1v4a1 1 0 001 1zm10 0h6a1 1 0 001-1v-8a1 1 0 00-1-1h-6a1 1 0 00-1 1v8a1 1 0 001 1zm0-18v4a1 1 0 001 1h6a1 1 0 001-1V3a1 1 0 00-1-1h-6a1 1 0 00-1 1z"/></svg>
+      <span class="nav-label">Overview</span>
+    </div>
+    <div class="nav-item" data-nav="funding">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95.49-7.4-2.97-6.91-6.91.34-2.73 2.51-4.91 5.24-5.24 3.95-.49 7.4 2.97 6.91 6.91-.34 2.73-2.51 4.91-5.24 5.24zM12 7a1 1 0 00-1 1v.4c-1.14.24-2 1.26-2 2.48 0 1.4 1.12 2.52 2.5 2.52.83 0 1.5.67 1.5 1.48s-.67 1.48-1.5 1.48-1.5-.67-1.5-1.48a1 1 0 10-2 0c0 1.22.86 2.24 2 2.48V18a1 1 0 102 0v-.4c1.14-.24 2-1.26 2-2.48 0-1.4-1.12-2.52-2.5-2.52-.83 0-1.5-.67-1.5-1.48S11.17 9.64 12 9.64s1.5.67 1.5 1.48a1 1 0 102 0c0-1.22-.86-2.24-2-2.48V8a1 1 0 00-1-1z"/></svg>
+      <span class="nav-label">Funding</span>
+    </div>
+    <div class="nav-item" data-nav="affiliates">
+      <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      <span class="nav-label">Affiliates</span>
+    </div>
+    <div class="nav-item" data-nav="settings">
+      <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 00-.48-.41h-3.84a.48.48 0 00-.48.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87a.48.48 0 00.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.48-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1115.6 12 3.61 3.61 0 0112 15.6z"/></svg>
+      <span class="nav-label">Settings</span>
+    </div>
+    <div class="nav-item" data-nav="more" id="moreBtn">
+      <svg viewBox="0 0 24 24"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      <span class="nav-label">More</span>
+    </div>
+  </nav>
+
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- More Menu -->
+<div class="more-menu" id="moreMenu">
+  <div class="more-menu-handle"></div>
+  <div class="more-menu-title">More</div>
+  <ul class="more-menu-list">
+    <li class="more-menu-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95.49-7.4-2.97-6.91-6.91.34-2.73 2.51-4.91 5.24-5.24 3.95-.49 7.4 2.97 6.91 6.91-.34 2.73-2.51 4.91-5.24 5.24z"/></svg>
+      Account Verification
+    </li>
+    <li class="more-menu-item">
+      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      Documents &amp; Reports
+    </li>
+    <li class="more-menu-item">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Support &amp; Contact
+    </li>
+    <li class="more-menu-item">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+      Security &amp; Privacy
+    </li>
+    <li class="more-menu-item">
+      <svg viewBox="0 0 24 24"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+      Help Center
+    </li>
+    <li class="more-menu-item danger">
+      <svg viewBox="0 0 24 24"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5a2 2 0 00-2 2v4h2V5h14v14H5v-4H3v4a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+      Log Out
+    </li>
+  </ul>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── Tab switching ──
+  const tabs = document.querySelectorAll('.tab-item');
+  const tabContents = {
+    securities: document.getElementById('tab-securities'),
+    trading: document.getElementById('tab-trading'),
+    'fixed-income': document.getElementById('tab-fixed-income')
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const key = tab.dataset.tab;
+      Object.entries(tabContents).forEach(([k, el]) => {
+        el.style.display = k === key ? '' : 'none';
+      });
+    });
+  });
+
+  // ── Bottom nav switching ──
+  const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(item => {
+    if (item.id === 'moreBtn') return;
+    item.addEventListener('click', () => {
+      navItems.forEach(n => n.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+
+  // ── More menu ──
+  const moreBtn = document.getElementById('moreBtn');
+  const moreMenu = document.getElementById('moreMenu');
+  const overlay = document.getElementById('overlay');
+
+  function openMore() {
+    moreMenu.classList.add('open');
+    overlay.classList.add('open');
+  }
+
+  function closeMore() {
+    moreMenu.classList.remove('open');
+    overlay.classList.remove('open');
+  }
+
+  moreBtn.addEventListener('click', () => {
+    if (moreMenu.classList.contains('open')) {
+      closeMore();
+    } else {
+      openMore();
+    }
+  });
+
+  overlay.addEventListener('click', closeMore);
+
+  document.querySelectorAll('.more-menu-item').forEach(item => {
+    item.addEventListener('click', () => {
+      setTimeout(closeMore, 150);
+    });
+  });
+
+  // ── Swipe-down to close More menu ──
+  let touchStartY = 0;
+  moreMenu.addEventListener('touchstart', e => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  moreMenu.addEventListener('touchmove', e => {
+    const dy = e.touches[0].clientY - touchStartY;
+    if (dy > 60) closeMore();
+  }, { passive: true });
+
+})();
+</script>
+
+</body>
+</html>

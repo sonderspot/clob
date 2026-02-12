@@ -1,0 +1,96 @@
+{
+  "date": "2026-02-11",
+  "runTimestamp": "2026-02-11T14:30:00Z",
+  "totalEmails": 10,
+  "processed": 10,
+  "skipped": 0,
+  "newSenders": [
+    {
+      "email": "accountservices@mailchimp.com",
+      "name": "Mailchimp Account Services",
+      "category": "Work"
+    }
+  ],
+  "emails": [
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "no-reply@connect.etoro.com",
+      "subject": "Fwd: SonderSpot, hear from the eToro CEO",
+      "category": "Newsletter",
+      "summary": "Live webinar invitation with eToro CEO Yoni Assia",
+      "action": "include"
+    },
+    {
+      "from": "accountservices@mailchimp.com",
+      "subject": "Unsubscribe from Master List",
+      "category": "Work",
+      "summary": "Rubayetak@gmail.com unsubscribed from Master List",
+      "action": "include",
+      "newSender": true
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "noreply@polymarket.com",
+      "subject": "Fwd: Lutnick off the island?",
+      "category": "Newsletter",
+      "summary": "Polygraph daily: Howard Lutnick political market speculation",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "noreply@oneroyal.eu",
+      "subject": "Fwd: Important Changes to CFD Expiry Dates",
+      "category": "Work",
+      "summary": "CFD expiry date changes for February 2026",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "newsletter@mobbin.com",
+      "subject": "Fwd: Wednesday Web Drop",
+      "category": "Newsletter",
+      "summary": "New web app designs: Pinterest, Posh, Kiwi.com featured",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "access@interactive.wsj.com",
+      "subject": "Fwd: WSJ Wealth Adviser Briefing: Hunting Global Stocks, Red Lobster Reduction, Broken Medals",
+      "category": "Newsletter",
+      "summary": "Global stocks picks, Red Lobster business cuts, Olympics medal issues",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "noreply@supabase.com",
+      "subject": "Fwd: Security vulnerabilities detected in your Supabase projects",
+      "category": "Security",
+      "summary": "Security vulnerabilities requiring immediate attention",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "noreply@ofmarkets.com",
+      "subject": "Fwd: Reminder: Important Notice - MT4/MT5 position and balance transfer information",
+      "category": "Work",
+      "summary": "MT4/MT5 account position and balance transfer reminder",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "antonio@updates.circlemind.co",
+      "subject": "Fwd: Early users get free credits on Smooth",
+      "category": "Business",
+      "summary": "Free credits offer for Smooth early adopters",
+      "action": "include"
+    },
+    {
+      "from": "hello@sonderspot.com",
+      "originalSender": "support.sey@equiti.com",
+      "subject": "Fwd: Daily Confirmation",
+      "category": "Work",
+      "summary": "Equiti Brokerage daily account confirmation",
+      "action": "include"
+    }
+  ]
+}
