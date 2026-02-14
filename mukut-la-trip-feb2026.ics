@@ -1,0 +1,208 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Clob//LA Trip Feb 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:LA Trip Feb 2026
+X-WR-TIMEZONE:America/Los_Angeles
+
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260218T110000
+DTEND;TZID=America/Los_Angeles:20260218T140000
+SUMMARY:✈️ Arrive LA
+DESCRIPTION:Land at LAX ~11am. Settle in, light exploration.\n\nTip: Grab coffee nearby, don't fight jet lag too hard.
+LOCATION:Los Angeles, CA
+UID:la-trip-20260218-arrive@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260219T070000
+DTEND;TZID=America/Los_Angeles:20260219T150000
+SUMMARY:💻 Work Block
+DESCRIPTION:Remote work day. Suggested spots:\n- Archives of Us (DTLA/Chinatown) - Futuristic Japanese cafe, rooftop\n- Café 2001 (Arts District) - European bistro, jazzy vibes
+LOCATION:Los Angeles, CA
+UID:la-trip-20260219-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260219T160000
+DTEND;TZID=America/Los_Angeles:20260219T200000
+SUMMARY:🎨 Explore DTLA - The Broad / Little Tokyo
+DESCRIPTION:Post-work exploration:\n\n• The Broad - Contemporary art, FREE admission (book ahead)\n• Walk to Little Tokyo - Geffen Contemporary (MOCA outpost)\n• Dinner in Little Tokyo or Arts District\n\nThe Broad: https://www.thebroad.org/
+LOCATION:The Broad, 221 S Grand Ave, Los Angeles, CA 90012
+UID:la-trip-20260219-explore@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260220T070000
+DTEND;TZID=America/Los_Angeles:20260220T150000
+SUMMARY:💻 Work Block
+DESCRIPTION:Remote work day.\n\nSuggested spots:\n- Coffee MCO (Koreatown) - 2-story, rooftop, great breakfast burritos\n- Cafe Mak (Koreatown) - Library vibes, open late
+LOCATION:Los Angeles, CA
+UID:la-trip-20260220-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260220T183000
+DTEND;TZID=America/Los_Angeles:20260220T210000
+SUMMARY:🌶️ Dinner Splurge #1 - Sichuan Impression
+DESCRIPTION:SPLURGE NIGHT! Mala heaven.\n\nSichuan Impression - San Gabriel Valley\nMouth-numbing Sichuan, authentic spice\n\nAlternatives:\n- Killer Noodle Tsujita (tantanmen)\n- Howlin' Ray's (Nashville hot chicken - expect lines)\n\nReservation recommended.
+LOCATION:Sichuan Impression, San Gabriel Valley
+UID:la-trip-20260220-dinner@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260221T100000
+DTEND;TZID=America/Los_Angeles:20260221T140000
+SUMMARY:🎬 Warner Bros Studio Tour
+DESCRIPTION:BOOK AM SLOT!\n\n• Real studio tour - walk on sets, touch things\n• Active production areas\n• Harry Potter, Central Perk, Batman, etc.\n• ~3 hours, ~$70\n\nBook: https://www.wbstudiotour.com/\n\nConsensus: "Warner beats Universal easily" for studio tour experience.
+LOCATION:Warner Bros. Studios, 3400 Warner Blvd, Burbank, CA 91505
+UID:la-trip-20260221-wb@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260221T150000
+DTEND;TZID=America/Los_Angeles:20260221T190000
+SUMMARY:🏖️ Afternoon Free - Burbank/LA Explore
+DESCRIPTION:Free afternoon after WB tour.\n\nOptions:\n- Explore Burbank\n- Head back to LA for food\n- Rest up for Sunday
+LOCATION:Los Angeles, CA
+UID:la-trip-20260221-afternoon@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260222T110000
+DTEND;TZID=America/Los_Angeles:20260222T150000
+SUMMARY:🚀 California Science Center - Space Shuttle Endeavour
+DESCRIPTION:See the actual Space Shuttle Endeavour!\n\nFREE admission to permanent exhibits.\n\nThe shuttle, space toilet exhibit, history of the program.\n\nhttps://californiasciencecenter.org/
+LOCATION:California Science Center, 700 Exposition Park Dr, Los Angeles, CA 90037
+UID:la-trip-20260222-science@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260222T170000
+DTEND;TZID=America/Los_Angeles:20260222T210000
+SUMMARY:🔭 Griffith Observatory - Sunset
+DESCRIPTION:Arrive before sunset for the views!\n\nFREE admission (planetarium shows are $)\nTelescope viewing at night\nIconic LA views\n\nTip: Parking can be tough - consider rideshare or hiking up.\n\nhttps://griffithobservatory.org/
+LOCATION:Griffith Observatory, 2800 E Observatory Rd, Los Angeles, CA 90027
+UID:la-trip-20260222-griffith@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260223T070000
+DTEND;TZID=America/Los_Angeles:20260223T150000
+SUMMARY:💻 Work Block - Cafe Mak or Coffee MCO
+DESCRIPTION:Remote work in Koreatown.\n\nCafe Mak - Library vibes, worn-in furniture, outlets everywhere, open late. Korean comfort food (kimchi carbonara, omelette rice).\n\nCoffee MCO - 2-story, rooftop patio, specialty lattes, 10hr braised brisket breakfast burrito.
+LOCATION:Koreatown, Los Angeles, CA
+UID:la-trip-20260223-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260223T180000
+DTEND;TZID=America/Los_Angeles:20260223T220000
+SUMMARY:🍜 Evening - Explore Koreatown
+DESCRIPTION:You're already in K-Town from work!\n\nFood options:\n- Late night Korean BBQ\n- Soondubu-jjigae (soft tofu stew)\n- Cafe Upper - open till midnight, K-pop vibes, Einspanners\n\nK-Town is lively at night.
+LOCATION:Koreatown, Los Angeles, CA
+UID:la-trip-20260223-ktown@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260224T070000
+DTEND;TZID=America/Los_Angeles:20260224T150000
+SUMMARY:💻 Work Block
+DESCRIPTION:Remote work day.\n\nMix it up - try:\n- HEXI Market & Cafe (Miracle Mile) - Hidden in Art Deco hall, Indonesian vibes\n- Archives of Us if you haven't yet
+LOCATION:Los Angeles, CA
+UID:la-trip-20260224-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260224T160000
+DTEND;TZID=America/Los_Angeles:20260224T200000
+SUMMARY:🎨 LACMA or Hammer Museum
+DESCRIPTION:Post-work museum time.\n\nLACMA - Largest art museum in the West. Urban Light lamps (iconic). More touristy but worth it.\n\nHammer Museum (Westwood) - Contemporary, rotating exhibits, FREE admission. Less crowded.\n\nPick one based on energy level.
+LOCATION:LACMA, 5905 Wilshire Blvd, Los Angeles, CA 90036
+UID:la-trip-20260224-museum@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260225T070000
+DTEND;TZID=America/Los_Angeles:20260225T150000
+SUMMARY:💻 Work Block
+DESCRIPTION:Remote work day - chill vibes.\n\nTry a new cafe or revisit a favorite.
+LOCATION:Los Angeles, CA
+UID:la-trip-20260225-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260225T180000
+DTEND;TZID=America/Los_Angeles:20260225T210000
+SUMMARY:🍽️ Chill Evening - Local Eats
+DESCRIPTION:Low-key evening.\n\nBudget-friendly options:\n- Yunnan Restaurant (Monterey Park) - Spicy fried chicken cubes\n- Northern Thai in East Hollywood\n- Any hidden gem that caught your eye
+LOCATION:Los Angeles, CA
+UID:la-trip-20260225-dinner@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260226T070000
+DTEND;TZID=America/Los_Angeles:20260226T150000
+SUMMARY:💻 Work Block
+DESCRIPTION:Remote work day.\n\nLast full work day - wrap up anything urgent.
+LOCATION:Los Angeles, CA
+UID:la-trip-20260226-work@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260226T160000
+DTEND;TZID=America/Los_Angeles:20260226T200000
+SUMMARY:📦 Pack or Final Explore
+DESCRIPTION:Options:\n- Pack and chill\n- Revisit a favorite spot\n- Catch anything you missed\n- Early dinner somewhere good
+LOCATION:Los Angeles, CA
+UID:la-trip-20260226-evening@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260227T090000
+DTEND;TZID=America/Los_Angeles:20260227T120000
+SUMMARY:🥾 Malibu - Solstice Canyon Hike
+DESCRIPTION:Easy hike to 1950s stone house ruins + year-round creek.\n\nLocal vibes, not touristy.\n\nAlternative: Escondido Falls (short hike to waterfall)\n\nWear comfortable shoes, bring water.
+LOCATION:Solstice Canyon, 3455 Solstice Canyon Rd, Malibu, CA 90265
+UID:la-trip-20260227-hike@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260227T123000
+DTEND;TZID=America/Los_Angeles:20260227T150000
+SUMMARY:🏖️ Malibu - El Matador Beach
+DESCRIPTION:Dramatic rock formations, caves, sea stacks.\n\nThe "open secret" beach - not overrun on weekdays.\n\nParking: $8 at the lot, or free along PCH (walk down stairs)\n\nBring layers - can be windy.
+LOCATION:El Matador State Beach, 32350 Pacific Coast Hwy, Malibu, CA 90265
+UID:la-trip-20260227-beach@clob
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260227T150000
+DTEND;TZID=America/Los_Angeles:20260227T170000
+SUMMARY:🥗 Malibu Farm Lunch
+DESCRIPTION:Ocean views + organic, locally-sourced food.\n\nOn the Malibu Pier.\n\nGood way to end the trip.\n\nhttps://www.malibu-farm.com/
+LOCATION:Malibu Farm, 23000 Pacific Coast Hwy, Malibu, CA 90265
+UID:la-trip-20260227-lunch@clob
+END:VEVENT
+
+END:VCALENDAR
